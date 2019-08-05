@@ -1,0 +1,12 @@
+ .img-thumbnail img{
+    width: 100%;
+}
+h5.text-left{
+    display: inline;
+}
+.img-thumbnail .img-fluid{
+    padding: 0;
+}
+.card{
+    background: #F5F5F5;
+}

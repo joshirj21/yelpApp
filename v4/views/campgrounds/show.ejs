@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+<h1>
+    <%= found.name %>
+</h1>
+<img src="<%= found.image %>" alt="">
+<p>
+    <%= found.description %>
+</p>
+<p>
+    <a href="/campgrounds/<%= found._id %>/comments/new" class="btn btn-success">Add new comment</a>
+</p>
+<%for(var i=0;i<found.comments.length;i++){%>
+<p><strong><%= found.comments[i].author %></strong> - <%- found.comments[i].text %></p>
+<% } %>
+<% include ../partials/footer %>

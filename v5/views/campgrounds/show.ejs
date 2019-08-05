@@ -1,0 +1,55 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">Yelpcamp</p>
+            <div class="list-group">
+                <li class="list-group-item active">info 1</li>
+                <li class="list-group-item">info 2</li>
+                <li class="list-group-item">info 3</li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="img-thumbnail p-0">
+                <img class="img-fluid rounded img-rounded" src="<%= found.image %>" alt="">
+                <div class="p-2">
+                    <h5 class="text-left display-4"><%= found.name %></h5>
+                    <h5 class="display-5 float-right pt-4">$9.00/night</h5>
+                    <p class="pt-4">
+                        <%= found.description %>
+                    </p>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <div class="text-right">
+                        <a href="/campgrounds/<%= found._id %>/comments/new" class="btn btn-success">Add new
+                            comment</a>
+                    </div>
+                    <hr>
+                    <%for(var i=0;i<found.comments.length;i++){%>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>
+                                <strong><%= found.comments[i].author %></strong>
+                                <span class="float-right">10 days ago</span>
+                                <br><%- found.comments[i].text %>
+                            </p>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<p>
+
+</p>
+<p>
+
+</p>
+<% include ../partials/footer %>

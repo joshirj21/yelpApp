@@ -1,0 +1,13 @@
+<% include partials/header %>
+
+<h1>
+    <%= found.name %>
+</h1>
+<img src="<%= found.image %>" alt="">
+<p>
+    <%= found.description %>
+</p>
+<p>
+    <%= found.comments[0].author %>
+</p>
+<% include partials/footer %>
